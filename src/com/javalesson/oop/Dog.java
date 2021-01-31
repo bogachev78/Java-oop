@@ -1,10 +1,33 @@
 package com.javalesson.oop;
 
 public class Dog {
+
+    private static int dogCount;
+
     private int paws;
     private int tail;
     private String name;
     private String breed;
+    private String size;
+
+    public static int getDogCount(){
+        return dogCount;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        if(size.equalsIgnoreCase("Big")||
+                size.equalsIgnoreCase("Average")||
+                size.equalsIgnoreCase("Small")){
+            this.size = size;
+        }else{
+            System.out.println("Size should be one of these: Big, Average or Small");
+        }
+
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -49,5 +72,19 @@ public class Dog {
 
     public void setBreed(String breed) {
         this.breed = breed;
+    }
+
+    public void bark(){
+        if(size.equalsIgnoreCase("Big")){
+            System.out.println("Wof - Wof");
+        }else if(size.equalsIgnoreCase("Average")){
+            System.out.println("Raf - Raf");
+        }else{
+            System.out.println("Tiaf - Tiaf");
+        }
+    }
+
+    public void bite(){
+
     }
 }
