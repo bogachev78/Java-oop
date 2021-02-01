@@ -11,7 +11,7 @@ public class Main {
         lab.setName("Charley");
         lab.setBreed("Lab");
         lab.setSize("Average");
-        lab.bark();
+        lab.bite();
 
         Dog shepard = new Dog();
         shepard.setPaws(4);
@@ -19,7 +19,15 @@ public class Main {
         shepard.setName("Mike");
         shepard.setBreed("Shepard");
         shepard.setSize("Big");
-        shepard.bark();
+        shepard.bite();
+
+        Dog doberman = new Dog();
+        doberman.setPaws(4);
+        shepard.setTail(1);
+        shepard.setName("Jack");
+        shepard.setBreed("Doberman");
+        shepard.setSize("Big");
+        shepard.bite();
 
         System.out.println("Lab's name is " + lab.getName());
         System.out.println("Shepard's name is " + shepard.getName());

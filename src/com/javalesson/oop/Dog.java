@@ -10,6 +10,11 @@ public class Dog {
     private String breed;
     private String size;
 
+    public Dog(){
+        dogCount++;
+        System.out.println("Dog's count is: " + dogCount);
+    }
+
     public static int getDogCount(){
         return dogCount;
     }
@@ -85,6 +90,10 @@ public class Dog {
     }
 
     public void bite(){
-
+        if(dogCount > 2){
+            System.out.println("Dogs are biting you");
+        }else{
+            bark();
+        }
     }
 }
